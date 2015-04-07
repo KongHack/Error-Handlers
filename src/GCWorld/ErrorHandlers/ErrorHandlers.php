@@ -128,13 +128,6 @@ class ErrorHandlers
 				echo 'An error has occurred.  Staff has been contacted and should have the problem resolved shortly.<br /><br /><hr /><br />'.$message;
 			}
 		}
-		$output ="
-		Server: ".$_SERVER['SERVER_NAME']."<br />\n
-		Request URI: ".$_SERVER['REQUEST_URI']."<br />\n
-		IP Address: ".$_SERVER['REMOTE_ADDR']."<br />\n
-		Error Output:\n".$message."<br />\n
-		Request Array: <pre>".print_r($_REQUEST,true)."</pre>\n
-		Session Array: <pre>".htmlspecialchars(print_r($_SESSION,true))."</pre>\n";
 	}
 	
 	public static function shutdownHandler()
