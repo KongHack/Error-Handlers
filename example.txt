@@ -1,0 +1,3 @@
+set_error_handler('\GCWorld\ErrorHandlers\ErrorHandlers::errorHandler');
+set_exception_handler('\GCWorld\ErrorHandlers\ErrorHandlers::exceptionHandler');
+register_shutdown_function('\GCWorld\ErrorHandlers\ErrorHandlers::shutdownHandler');
