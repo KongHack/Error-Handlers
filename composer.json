@@ -1,5 +1,5 @@
 {
-  "name": "GCWorld/ErrorHandlers",
+  "name": "gcworld/errorhandlers",
   "description": "GCWorld Industries Error Handlers",
   "authors": [
     {
@@ -7,14 +7,13 @@
       "email": "admin@gamecharmer.com"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
     "raveren/kint": "v0.9"
   },
   "autoload": {
-    "psr-0": {
-      "GCWorld": "src/"
+    "psr-4": {
+      "GCWorld\\ErrorHandlers\\": "src/"
     }
   }
 }
