@@ -113,12 +113,6 @@ class ErrorHandlers
 		{
 			d($message);
 			d($trace);
-			if($trace != null)
-			{
-				echo '<br><br><pre>';
-				print_r($trace);
-				echo '</pre>';
-			}
 		}
 		else
 		{
@@ -126,6 +120,15 @@ class ErrorHandlers
 			if($display)
 			{
 				echo 'An error has occurred.  Staff has been contacted and should have the problem resolved shortly.<br /><br /><hr /><br />'.$message;
+			}
+			else
+			{
+				if($trace != null)
+				{
+					echo '<br><br><pre>';
+					print_r($trace);
+					echo '</pre>';
+				}
 			}
 		}
 	}
