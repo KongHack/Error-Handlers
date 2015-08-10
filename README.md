@@ -11,7 +11,7 @@ Place this in your front controller after loading composer
 	register_shutdown_function('\GCWorld\ErrorHandlers\ErrorHandlers::shutdownHandler');
 
 ### Version
-1.0.1
+1.0.5
 
 ### Additional Information
 
