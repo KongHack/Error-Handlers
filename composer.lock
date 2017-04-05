@@ -1,29 +1,34 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74c554eff59f66154b90e7d75aada744",
+    "content-hash": "0187b5365024d5a26f5c6c2da8b6744f",
     "packages": [
         {
-            "name": "raveren/kint",
-            "version": "v0.9",
+            "name": "kint-php/kint",
+            "version": "1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/raveren/kint.git",
-                "reference": "ada810111ced4e3a926b4040da9b86442e43b613"
+                "url": "https://github.com/kint-php/kint.git",
+                "reference": "a8549198558560b24e2879c6bac2875de5371483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raveren/kint/zipball/ada810111ced4e3a926b4040da9b86442e43b613",
-                "reference": "ada810111ced4e3a926b4040da9b86442e43b613",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/a8549198558560b24e2879c6bac2875de5371483",
+                "reference": "a8549198558560b24e2879c6bac2875de5371483",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": ">=5.1.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "files": [
                     "Kint.class.php"
@@ -36,26 +41,26 @@
             "authors": [
                 {
                     "name": "Rokas Šleinius",
-                    "homepage": "https://github.com/raveren"
+                    "homepage": "https://github.com/kint-php"
                 },
                 {
                     "name": "Contributors",
-                    "homepage": "https://github.com/raveren/kint/contributors"
+                    "homepage": "https://github.com/kint-php/kint/contributors"
                 }
             ],
             "description": "Kint - debugging helper for PHP developers",
-            "homepage": "https://github.com/raveren/kint",
+            "homepage": "https://github.com/kint-php/kint",
             "keywords": [
                 "debug",
                 "kint",
                 "php"
             ],
-            "time": "2013-08-12 22:46:16"
+            "time": "2017-01-15T14:23:43+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,

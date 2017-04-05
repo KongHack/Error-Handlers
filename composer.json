@@ -9,7 +9,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "raveren/kint": "v0.9"
+    "kint-php/kint": "^1.1"
   },
   "autoload": {
     "psr-4": {
