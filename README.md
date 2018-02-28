@@ -4,7 +4,7 @@ Just a simple set of error handlers you can use in your project.
 
 ## Example
 
-Place this in your front controller after loading composer
+Place this in your front controller after requiring your auto-loader
 
 	set_error_handler('\GCWorld\ErrorHandlers\ErrorHandlers::errorHandler');
 	set_exception_handler('\GCWorld\ErrorHandlers\ErrorHandlers::exceptionHandler');
@@ -15,4 +15,4 @@ Place this in your front controller after loading composer
 
 ### Additional Information
 
-* [GCWorld Public Gitlab](https://gitlab.konghack.com/groups/GCWorld)
+* [GCWorld Github Group](https://github.com/KongHack)
