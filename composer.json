@@ -8,12 +8,13 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0",
+    "php": ">=7.0",
     "kint-php/kint": "^1.1"
   },
   "autoload": {
     "psr-4": {
       "GCWorld\\ErrorHandlers\\": "src/"
     }
-  }
+  },
+  "license":"proprietary"
 }

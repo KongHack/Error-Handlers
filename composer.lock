@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0187b5365024d5a26f5c6c2da8b6744f",
+    "content-hash": "9dd73f58ba5e9a1baf868fb177e6fb1c",
     "packages": [
         {
             "name": "kint-php/kint",
@@ -65,7 +65,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.0"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }

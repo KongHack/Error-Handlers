@@ -6,62 +6,19 @@ use \PDOException;
 
 class ErrorHandlers
 {
-    public static function errorHandler($errno, $errstr, $errfile, $errline, $errcontext)
+    /**
+     * @param $errorNumber
+     * @param $errorMessage
+     * @param $errorFile
+     * @param $errorLine
+     *
+     * @throws \ErrorException
+     *
+     * @return void
+     */
+    public static function errorHandler($errorNumber, $errorMessage, $errorFile, $errorLine)
     {
-        if (!(error_reporting() & $errno)) {
-            return false;
-        }
-        switch($errno)
-        {
-            case E_NOTICE:
-            case E_USER_NOTICE:
-                return false;
-                break;
-            case E_WARNING:
-            case E_USER_WARNING:
-            case E_STRICT:
-                $type = 'warning';
-                $fatal = false;
-                break;
-            default:
-                $type = 'fatal error';
-                $fatal = true;
-                break;
-        }
-        $output = '';
-        $trace = array_reverse(debug_backtrace());
-        array_pop($trace);
-        if (php_sapi_name() == 'cli') {
-            $output .= 'Backtrace from ' . $type . ' \'' . $errstr . '\' at ' . $errfile . ' ' . $errline . ':' . "\n";
-            foreach ($trace as $item) {
-                $output .= '  ' . (isset($item['file']) ? $item['file'] : '<unknown file>') . ' ' . (isset($item['line']) ? $item['line'] : '<unknown line>') . ' calling ' . $item['function'] . '()' . "\n";
-            }
-        } else {
-            $output .= '<p class="error_backtrace">' . "\n";
-            $output .= '  Backtrace from ' . $type . ' \'' . $errstr . '\' at ' . $errfile . ' ' . $errline . ':' . "\n";
-            $output .= '  <ol>' . "\n";
-            foreach ($trace as $item) {
-                $output .= '	<li>' . (isset($item['file']) ? $item['file'] : '<unknown file>') . ' ' . (isset($item['line']) ? $item['line'] : '<unknown line>') . ' calling ' . $item['function'] . '()</li>' . "\n";
-            }
-            $output .= '  </ol>' . "\n";
-            $output .= '</p>' . "\n";
-        }
-        $items = array();
-        foreach ($trace as $item) {
-            $items[] = (isset($item['file']) ? $item['file'] : '<unknown file>') . ' ' . (isset($item['line']) ? $item['line'] : '<unknown line>') . ' calling ' . $item['function'] . '()';
-        }
-        $output .= '<br><br>Backtrace from ' . $type . ' \'' . $errstr . '\' at ' . $errfile . ' ' . $errline . ': ' . join(' | ', $items);
-        //error_log('----- START'.$message.'----- END');
-
-        $reported = self::reportError($output, $errno, $trace);
-        if (!$reported) {
-            echo $output;
-        }
-
-        if ($fatal) {
-            exit(1);
-        }
-        return true;
+        throw new \ErrorException($errorMessage, 0, $errorNumber, $errorFile, $errorLine);
     }
 
     public static function exceptionHandler($exception)
