@@ -11,7 +11,7 @@ Place this in your front controller after requiring your auto-loader
 	register_shutdown_function('\GCWorld\ErrorHandlers\ErrorHandlers::shutdownHandler');
 
 ### Version
-1.2.0
+1.2.1
 
 ### Additional Information
 

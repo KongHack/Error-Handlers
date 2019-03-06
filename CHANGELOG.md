@@ -7,8 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
+##[1.2.1](https://github.com/KongHack/Error-Handlers/releases/tag/1.2.1)
+ - @GameCharmer Update for kint
+
+
+
 ##[1.2.0](https://github.com/KongHack/Error-Handlers/releases/tag/1.2.0)
  - @GameCharmer Throw an exception from the standard errorHandle function
+
 
 
 ##[1.1.0](https://github.com/KongHack/Error-Handlers/releases/tag/1.1.0)

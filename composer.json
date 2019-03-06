@@ -9,7 +9,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "kint-php/kint": "^1.1"
+    "kint-php/kint": ">=1.1"
   },
   "autoload": {
     "psr-4": {
